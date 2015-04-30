@@ -55,7 +55,9 @@ var install = require('install-if-needed')
 var fs = require('fs')
 var template = fs.readFileSync(__dirname + '/template.js')
 
-install('tape', function(err) {
+install({
+  devDependencies: 'tape'
+}, function(err) {
   if (err) throw err
   fs.writeFile(process.argv[2], template)
 })
