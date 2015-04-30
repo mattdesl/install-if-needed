@@ -1,0 +1,53 @@
+{
+  "name": "install-if-needed",
+  "version": "1.0.0",
+  "description": "installs the given modules if needed",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {
+    "closest-package": "^1.0.0",
+    "object-assign": "^2.0.0",
+    "read-json": "^0.1.0",
+    "run-series": "^1.1.0",
+    "spawn-npm-install": "^1.0.4"
+  },
+  "devDependencies": {
+    "tape": "^4.0.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "install",
+    "npm",
+    "programmatically",
+    "spawn",
+    "installation",
+    "cli",
+    "command",
+    "module",
+    "installs",
+    "installing",
+    "save",
+    "--save",
+    "--save-dev",
+    "dep",
+    "deps",
+    "dependencies",
+    "devDependencies"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/install-if-needed.git"
+  },
+  "homepage": "https://github.com/mattdesl/install-if-needed",
+  "bugs": {
+    "url": "https://github.com/mattdesl/install-if-needed/issues"
+  },
+  "optionalDependencies": {}
+}
