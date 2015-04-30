@@ -52,6 +52,20 @@ test('does not save deps when save: false', function (t) {
   })
 })
 
+test('saves to dependencies', function (t) {
+  t.plan(2)
+
+  install(['zalgo', 'quote-stream'], function (err) {
+    if (err) t.fail(err)
+    includes(t, 'dependencies', 'quote-stream', true)
+    includes(t, 'dependencies', 'zalgo', true)
+
+    uninstall(['zalgo', 'quote-stream'], { save: true }, function (err) {
+      if (err) t.fail(err)
+    })
+  })
+})
+
 function includes (t, key, name, exists) {
   json(path.join(__dirname, 'package.json'), function (err, data) {
     if (err) t.fail(err)

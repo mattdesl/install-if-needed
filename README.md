@@ -33,7 +33,7 @@ Looks at `package` JSON and installs any of the specified dependencies that are 
 - `devDependencies` dev dependencies to install
 - `optionalDependencies` optional dependencies to install
 
-Other options are passed to [spawn-npm-install](https://www.npmjs.com/package/spawn-npm-install) and the install command (e.g. `stdio`).
+Other options are passed to [spawn-npm-install](https://www.npmjs.com/package/spawn-npm-install).
 
 On complete, `cb` is called with `(err)` status. All dependencies also accept a single string instead of an array.
 
