@@ -2,7 +2,7 @@ var install = require('spawn-npm-install')
 var each = require('run-series')
 var assign = require('object-assign')
 var filter = require('./lib/filter-package-deps')
-var readPackage = require('./lib/read-package')
+var readPackage = require('read-closest-package')
 
 var saveArg = {
   dependencies: 'save',
@@ -20,7 +20,7 @@ module.exports = function (opt, cb) {
       run(null, opt.package)
     })
   } else {
-    readPackage(opt.cwd || process.cwd(), run)
+    readPackage({ cwd: opt.cwd || process.cwd() }, run)
   }
 
   function run (err, packageData) {
