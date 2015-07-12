@@ -32,6 +32,7 @@ Looks at `package` JSON and installs any of the specified dependencies that are 
 - `dependencies` dependencies to install
 - `devDependencies` dev dependencies to install
 - `optionalDependencies` optional dependencies to install
+- `command` the command to spawn when installing, defaults to `'npm'`
 
 Other options are passed to [spawn-npm-install](https://www.npmjs.com/package/spawn-npm-install).
 
